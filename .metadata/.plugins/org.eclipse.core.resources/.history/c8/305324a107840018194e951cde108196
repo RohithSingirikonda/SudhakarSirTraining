@@ -1,0 +1,27 @@
+package com.java.practise;
+
+public class Pattern_3 {
+
+	public static void main(String[] args) {
+		
+		int num = 5;
+		
+		for (int i = 5; i<=num; i--) {
+			
+			int n=5;
+			for (int j = 5; j<=num; j--) {
+				
+				if (i>j) {
+					System.out.print("*");
+				} else {
+					System.out.print(n--);
+				}
+				
+			}
+			System.out.println();
+		}
+		
+
+	}
+
+}

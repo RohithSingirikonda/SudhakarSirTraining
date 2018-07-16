@@ -1,0 +1,26 @@
+package com.java.practise;
+
+public class Fibonacci_Series_Using_function {
+	
+	static int f0=0, f1=1, f2=0;
+	
+	public void Fibonacci(int count){
+		
+		f2=f0+f1;
+		f0=f1;
+		f1=f2;
+		
+		
+	}
+	
+
+	public static void main(String[] args) {
+		
+		int count = 5;
+		Fibonacci_Series_Using_function fib = new Fibonacci_Series_Using_function();
+		System.out.println(f0+" "+f1);
+		fib.Fibonacci(count-2);
+
+	}
+
+}

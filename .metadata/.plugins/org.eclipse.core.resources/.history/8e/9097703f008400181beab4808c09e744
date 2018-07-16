@@ -1,0 +1,17 @@
+package com.java.practise;
+
+public class Fibonacci_Series_Using_function {
+	
+	
+	public int Fibonacci(){
+		
+		
+	}
+	
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.temp;
+
+import com.util.Xls_Reader;
+
+public class DateTest {
+
+	public static void main(String[] args) {
+		
+		Xls_Reader reader = new Xls_Reader("C:/Users/ramya/Desktop/SudhakarSirTraining/MISProject/src/main/java/com/temp/Temp.xlsx");
+		int TM_rowCount = reader.getRowCount("TM");
+
+		
+		
+
+	}
+
+}

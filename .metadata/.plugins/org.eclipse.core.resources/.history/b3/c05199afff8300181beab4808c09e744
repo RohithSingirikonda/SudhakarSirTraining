@@ -1,0 +1,29 @@
+package com.java.practise;
+
+public class Fibonacci_Series {
+
+	public static void main(String[] args) {
+		
+		int value = 5;
+		int f0=0, f1=1, f2 ;
+		
+		System.out.print(f0+" "+f1);
+	
+		for (int i = 0; i < value; i++) {
+			
+			int temp;
+			f2 = f0 + f1;
+			
+			temp = f0;
+			f0 = f1;
+			f1 = f2;
+			System.out.print(f2);
+			
+			
+		}
+		
+		
+
+	}
+
+}

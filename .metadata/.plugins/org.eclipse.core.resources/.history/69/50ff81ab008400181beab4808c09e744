@@ -1,0 +1,24 @@
+package com.java.practise;
+
+public class Fibonacci_Series_Using_function {
+	
+	static int f0=0, f1=1, f2=0;
+	
+	public void Fibonacci(){
+		
+		f2=f0+f1;
+		f0=f1;
+		f1=f2;
+		
+		
+	}
+	
+
+	public static void main(String[] args) {
+		
+		Fibonacci_Series_Using_function fib = new Fibonacci_Series_Using_function();
+		
+
+	}
+
+}

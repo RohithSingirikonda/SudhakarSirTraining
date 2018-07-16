@@ -1,0 +1,27 @@
+package com.temp;
+
+import com.util.Xls_Reader;
+
+public class DateTest {
+
+	public static void main(String[] args) {
+		
+		Xls_Reader reader = new Xls_Reader("C:/Users/ramya/Desktop/SudhakarSirTraining/MISProject/src/main/java/com/temp/Temp.xlsx");
+		int rowCount = reader.getRowCount("a");
+
+		for (int rowNum = 2; rowNum <=rowCount; rowNum++) {
+			
+			String Name = reader.getCellData("login_details", "Name", rowNum);
+			String Tkt = reader.getCellData("login_details", "Ticket", rowNum);
+			
+			System.out.println(Name+" "+Tkt);
+			
+				reader.setCellData("test_data", "Name", rowNum, Name);
+				reader.setCellData("test_data", "Ticket", rowNum, Tkt);
+				System.out.println("Inserted Successfully");
+		}		
+		
+
+	}
+
+}

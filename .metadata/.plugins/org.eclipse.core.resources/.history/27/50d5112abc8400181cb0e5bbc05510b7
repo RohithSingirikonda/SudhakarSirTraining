@@ -1,0 +1,42 @@
+package com.operations;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.util.Xls_Reader;
+
+public class TMtoTL {
+
+	public static void main(String[] args) throws ParseException {
+		
+		String TM_SheetName = "TM";
+		String TL_SheetName = "TM_Total";
+		
+		System.out.println(System.getProperty("user.dir"));
+		//Xls_Reader reader = new Xls_Reader(System.getProperty("user.dir")+"/src/main/java/com/excel/MISData.xlsx");
+		
+		Xls_Reader TM_reader = new Xls_Reader("C:/Users/ramya/Desktop/SudhakarSirTraining/MISProject/src/main/java/com/excel/TM_Tracker.xlsx");
+		int TM_rowCount = TM_reader.getRowCount("TM");
+
+		Xls_Reader TL_reader = new Xls_Reader("C:/Users/ramya/Desktop/SudhakarSirTraining/MISProject/src/main/java/com/excel/TL_TM_Tracker.xlsx");
+		int TL_rowCount = TL_reader.getRowCount("TM_Total");
+
+
+		for (int rowNum = 2; rowNum <=TM_rowCount; rowNum++) {
+			
+			String date = TM_reader.getCellData(TM_SheetName, "Date", rowNum);
+			SimpleDateFormat sdf1=new SimpleDateFormat("dd-mm-yyyy");
+			Date d=sdf1.parse(date);
+			SimpleDateFormat sdf2=new SimpleDateFormat("dd-mm-yyyy");
+			System.out.println(sdf2.format(d));
+			
+			
+		
+				//test_data
+			}
+		System.out.println("Total Data Inserted Successfully");
+
+	}
+
+}

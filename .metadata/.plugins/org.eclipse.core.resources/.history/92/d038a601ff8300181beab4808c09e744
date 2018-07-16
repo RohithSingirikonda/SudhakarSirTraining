@@ -1,0 +1,23 @@
+package com.java.practise;
+
+public class Fibonacci_Series {
+
+	public static void main(String[] args) {
+		
+		int value = 5;
+		int f0=0, f1=1, f2 ;
+		
+		System.out.println(f0 +""+ f1);
+		
+		for (int i = 0; i < 5; i++) {
+			
+			
+			
+			
+		}
+		
+		
+
+	}
+
+}

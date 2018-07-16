@@ -1,0 +1,36 @@
+package com.operations;
+
+import com.util.Xls_Reader;
+
+public class TMtoTL {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println(System.getProperty("user.dir"));
+		//Xls_Reader reader = new Xls_Reader(System.getProperty("user.dir")+"/src/main/java/com/excel/MISData.xlsx");
+		
+		Xls_Reader TM_reader = new Xls_Reader("C:/Users/ramya/Desktop/SudhakarSirTraining/MISProject/src/main/java/com/excel/TM_Tracker.xlsx");
+		int TM_rowCount = TM_reader.getRowCount("TM");
+
+		Xls_Reader TL_reader = new Xls_Reader("C:/Users/ramya/Desktop/SudhakarSirTraining/MISProject/src/main/java/com/excel/TL_TM_Tracker.xlsx");
+		int TL_rowCount = TL_reader.getRowCount("TM_Total");
+
+
+		for (int rowNum = 2; rowNum <=TM_rowCount; rowNum++) {
+		
+			String Name = TM_reader.getCellData("login_details", "Name", rowNum);
+			String Tkt = TM_reader.getCellData("login_details", "Ticket", rowNum);
+			
+			System.out.println(Name+" "+Tkt);
+			
+				TL_reader.setCellData("test_data", "Name", rowNum, Name);
+				TL_reader.setCellData("test_data", "Ticket", rowNum, Tkt);
+				System.out.println("Inserted Successfully");
+		
+				//test_data
+		}
+
+	}
+
+}

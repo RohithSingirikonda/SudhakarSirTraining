@@ -1,0 +1,58 @@
+package com.operations;
+
+import com.util.Xls_Reader;
+
+public class TMtoTL {
+
+	public static void main(String[] args) {
+		
+		String TM_SheetName = "TM";
+		String TL_SheetName = "TM_Total";
+		
+		System.out.println(System.getProperty("user.dir"));
+		//Xls_Reader reader = new Xls_Reader(System.getProperty("user.dir")+"/src/main/java/com/excel/MISData.xlsx");
+		
+		Xls_Reader TM_reader = new Xls_Reader("C:/Users/ramya/Desktop/SudhakarSirTraining/MISProject/src/main/java/com/excel/TM_Tracker.xlsx");
+		int TM_rowCount = TM_reader.getRowCount("TM");
+
+		Xls_Reader TL_reader = new Xls_Reader("C:/Users/ramya/Desktop/SudhakarSirTraining/MISProject/src/main/java/com/excel/TL_TM_Tracker.xlsx");
+		int TL_rowCount = TL_reader.getRowCount("TM_Total");
+
+
+		for (int rowNum = 2; rowNum <=TM_rowCount; rowNum++) {
+			
+			String date = TM_reader.getCellData(TM_SheetName, "Date", rowNum);
+			String shift = TM_reader.getCellData(TM_SheetName, "Shift", rowNum);
+			String name = TM_reader.getCellData(TM_SheetName, "Name", rowNum);
+			String ticket_no = TM_reader.getCellData(TM_SheetName, "Ticket No/ Description", rowNum);
+			String resolved = TM_reader.getCellData(TM_SheetName, "Resolved", rowNum);
+			String resolved_old = TM_reader.getCellData(TM_SheetName, "Resolved old tickets", rowNum);
+			String open_pending = TM_reader.getCellData(TM_SheetName, "Open / Pending", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "L1", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "L3", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "BA", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "L2", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "COMM-CG", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "SKU-CG", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "Scheme-CG", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "NPC-L2", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "CPS/MDM/BIW/SAP/WPC", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "Name in L2", rowNum);
+			String Date = TM_reader.getCellData(TM_SheetName, "Remarks", rowNum);
+			
+			
+			
+			
+			System.out.println(Name+" "+Tkt);
+			
+				TL_reader.setCellData("test_data", "Name", rowNum, Name);
+				TL_reader.setCellData("test_data", "Ticket", rowNum, Tkt);
+				System.out.println("Inserted Successfully");
+		
+				//test_data
+		}
+		
+
+	}
+
+}

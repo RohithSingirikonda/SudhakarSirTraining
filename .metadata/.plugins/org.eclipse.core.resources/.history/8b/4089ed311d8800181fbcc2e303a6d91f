@@ -1,0 +1,11 @@
+package com.practice;
+
+public class ActionClass {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("driver.chrome.webdriver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
+
+	}
+
+}
